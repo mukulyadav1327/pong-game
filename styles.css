@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+    color: #00ff88;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00ff88;
+    letter-spacing: 3px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #00ff88;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score .label {
+    color: #00ff88;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.score-value {
+    color: #00ff88;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+#pongCanvas {
+    display: block;
+    background-color: #000;
+    border: 3px solid #00ff88;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.controls {
+    background: rgba(0, 255, 136, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #00ff88;
+    margin-top: 20px;
+    color: #00ff88;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controls p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.controls ul {
+    list-style: none;
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+.controls li:before {
+    content: "▶ ";
+    margin-right: 8px;
+    color: #00ff88;
+}
+
+.status {
+    margin-top: 20px;
+    color: #00ff88;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff88;
+    min-height: 25px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    #pongCanvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
